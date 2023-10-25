@@ -25,6 +25,11 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +44,33 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+      window.get = (url, cb, errCb) => {
+          fetch(url)
+              .then(r => r.json())
+              .then(r => cb(r))
+              .catch(err => {if(errCb) errCb(err)})
+      }
+
+      window.post = (url, body, cb, errCb) => {
+          fetch(url, {
+              method: 'post',
+              headers: new Headers({'content-type': 'application/json'}),
+              body: JSON.stringify(body)
+          }).then(r => r.json())
+              .then(r => cb(r))
+              .catch(err => {if(errCb)errCb(err)})
+      }
+
+      window.put = (url, body, cb, errCb) => {
+          fetch(url, {
+              method: 'put',
+              headers: new Headers({'content-type': 'application/json'}),
+              body: JSON.stringify(body)
+          }).then(r => r.json())
+              .then(r => cb(r))
+              .catch(err =>{ if(errCb) errCb(err)})
+      }
+  </script>
   </body>
 </html>

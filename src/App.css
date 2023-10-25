@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+
+.app {
+    background: rgba(40, 44, 52, 0.8);
+    margin-bottom: 0;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.red {
+    background: red;
+}
+
+.showcase {
+    width: 18rem;
+}
+
+.pull-bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+.p-b {
+    padding-bottom: 1rem;
+}
+
+.fit {
+    min-height: fit-content;
+}
+
+
+.w50 {
+    width: 50%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h75 {
+    min-height: 75%;
+}
+
+.h65 {
+    min-height: 65%;
+}
+
+.h5rem {
+    height: 17rem;
+}
+
+.return-frame {
+    border: 0.3rem solid #ffffff;
+    border-radius: 1rem;
+    height: 12rem;
+}
+
+h1 {
+    color: aliceblue;
+}
+
+h3 {
+    color: aliceblue;
+}
+
+.animation-spin {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ml {
+    margin-left: 0.5rem;
+}
+
+.screen {
+    background-color: #101010;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    min-height: 18rem;
+}
+
+.text-green {
+    color: greenyellow;
+}
+
+.w33 {
+    width: 33%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.rem10 {
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+.login-card{
+    max-width: 540px;
+}
+
+.ph-2{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
