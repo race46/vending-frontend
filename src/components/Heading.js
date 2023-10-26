@@ -6,7 +6,7 @@ export default () => {
     useEffect(()=>{
         setInterval(()=>{
             window.get("/api/machine/hearth-beat", setStatus)
-        }, 5000)
+        }, 500)
     },[])
     return <><h1 className="text-center">Vending Machine</h1>
         <div className="d-flex">
