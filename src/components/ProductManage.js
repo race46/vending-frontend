@@ -3,8 +3,11 @@ import {toast} from "react-toastify";
 
 const updateProduct = (product, details, setDisable) => {
     setDisable(true)
-    window.put(`/api/admin/products/${product.id}`, details, ()=>{
-        toast.success(product.name + ' updated')
+    window.put(`/api/admin/products/${product.id}`, details, (r)=>{
+        if(r.code === 202)
+            toast.success(product.name + ' updated')
+        else
+            toast.error(r.message)
         setDisable(false)
     })
 }
