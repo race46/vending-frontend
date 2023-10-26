@@ -4,7 +4,8 @@ const login = (username, password, setLogin, setMessage) => {
     window.post("/api/admin/login", {username, password}, (r)=> {
         setMessage(r.message)
 
-        setLogin(r.code)
+        if(r.code)
+            setLogin(r.code)
 
     }, (err) => {
         setMessage(err.message)
